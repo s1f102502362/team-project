@@ -1,3 +1,76 @@
-.red{
-   color: #ff0000 ;
+#menu-toggle {
+  display: none;
 }
+
+.menu-btn{
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1001  ;
+}
+
+.menu-btn span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.side-menu {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width:var(--menu-width) ;
+  height: 100vh;
+  background: #fafafa;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  padding-top: 60px;
+}
+
+#menu-toggle:checked ~ .side-menu {
+  transform: translateX(0);
+}
+
+#menu-toggle:checked + .menu-btn span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+#menu-toggle:checked + .menu-btn span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-btn span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+main{
+  padding: 40px;
+}
+
+.content {
+  position: relative;
+  left: 0;
+  transition: left var(--transition);
+}
+
+#menu-toggle:checked ~ .side-menu {
+  left: 0;
+}
+#menu-toggle:checked ~ .content {
+  left: var(--menu-width);
+}
+
+:root {
+  --menu-width: 250px;     
+  --transition: 0.3s ease;  
+}
+
+ 
