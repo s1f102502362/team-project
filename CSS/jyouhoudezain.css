@@ -1,0 +1,53 @@
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+  line-height: 1.8;
+  margin: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.8em;
+  margin: 0 0 10px;
+}
+
+.content {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ddd;
+}
