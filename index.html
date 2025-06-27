@@ -20,30 +20,52 @@
       <h2><li><a href="#">情報セキュリティ</a></li></h2>
     </ol>
   </nav>
-  <main class ="content">
-    <h1>情報学部ってどんなとこ？</h1>
-    <p>情報学部では「情報」を中心にした学問と技術を総合的に学びます。</p>
-    <h2>学ぶ内容・カリキュラム</h2>
-    <p>情報学部ではどのようなことについて学ぶのか、いくつか例を紹介します。</p>
-    <ol><li>コンピュータサイエンス<br>
-    コンピュータの仕組みやプログラミングについて学びます。</li>
-    <li>情報デザイン<br>
-    ユーザーが「見やすく」「使いやすい」Webサイトやアプリ、ゲームなどのデザイン・開発について学びます。</li>
-    <li>情報セキュリティ<br>
-    インターネットやパソコンを「安全に使う」ために、ハッキングやウイルスを防いだり、データを守ったりする技術を学びます。</li></ol>
-    <h2>主な研究テーマ</h2>
-    <p>情報学部に所属する生徒は卒業研究でどのようなことについて研究するのか紹介します。</p>
-    <ol><li>深層学習（AI）を用いた画像・音声認識 </li>
-    <li> IoTデバイスの省エネ通信プロトコル </li>
-    <li>ビッグデータ解析によるマーケティング最適化 </li>
-    <li>ユーザービリティ調査に基づくweb/アプリ設計 など  </li></ol>
-    <h2>卒業後のキャリア</h2>
-    <p>情報学部の生徒は卒業後、主にどのような仕事をするのかについて紹介します。</p>
-    <ol><li>システムエンジニア、プログラマ、ネットワークエンジニア</li>
-    <li>データサイエンティスト、AIエンジニア、セキュリティエンジニア</li>
-    <li>研究開発職（企業・公的研究機関） </li>
-    <li> ITコンサルタント、プロジェクトマネージャー など</li>
-    </ol>
-  </main>
+  <main class="hero">
+    
+    <div class="labels-horizontal">
+      <a href="https://example.com/cs" target="_blank" class="label">コンピュータサイエンス</a>
+      <a href="https://example.com/design" target="_blank" class="label">情報デザイン</a>
+      <a href="https://example.com/security" target="_blank" class="label">情報セキュリティ</a>
+    </div>
+   
+    <svg class="hero-bg" width="100%" height="350" viewBox="0 0 1000 350" preserveAspectRatio="none">
+      <defs>
+        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#4F8DFD" />
+          <stop offset="100%" stop-color="#cfdaff" />
+        </linearGradient>
+      </defs>
+      <ellipse cx="500" cy="175" rx="470" ry="130" fill="url(#grad)" />
+      <ellipse cx="800" cy="80" rx="160" ry="60" fill="#fff7" />
+      <ellipse cx="200" cy="250" rx="120" ry="40" fill="#fff5" />
+      <rect x="300" y="50" width="400" height="200" fill="#b4ccff" opacity="0.12" rx="70"/>
+      <rect x="420" y="70" width="70" height="60" fill="#112277" opacity="0.13" rx="20"/>
+      <polyline points="180,175 500,90 900,175 500,260 180,175" fill="none" stroke="#3562A1" stroke-width="4" opacity="0.13"/>
+    </svg>
+</main>
+
+  <div class="caption">
+    <h3>主な研究テーマ</h3>
+    <p>
+      情報学部に所属する生徒は卒業研究でどのようなことについて研究するのか紹介します。
+      <ul>
+        <li>深層学習（AI）を用いた画像・音声認識</li>
+        <li>IoTデバイスの省エネ通信プロトコル</li>
+        <li>ビッグデータ解析によるマーケティング最適化</li>
+        <li>ユーザービリティ調査に基づくweb/アプリ設計 など</li>
+      </ul>
+
+      <h3>卒業後のキャリア</h3>
+      情報学部の生徒は卒業後、主にどのような仕事をするのかについて紹介します。
+      <ul>
+        <li>システムエンジニア、プログラマ、ネットワークエンジニア</li>
+        <li>データサイエンティスト、AIエンジニア、セキュリティエンジニア</li>
+        <li>研究開発職（企業・公的研究機関）</li>
+        <li>ITコンサルタント、プロジェクトマネージャー など</li>
+      </ul>
+    </p>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
