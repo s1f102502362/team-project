@@ -73,4 +73,122 @@ main{
   --transition: 0.3s ease;  
 }
 
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Meiryo, 'ヒラギノ角ゴ ProN', sans-serif;
+  background: #f6f9ff;
+  min-height: 100vh;
+}
+
+/* メインビジュアル部分 */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background: #e5eefd;
+}
+13:45
+/* ラベル横並び＋画像上に重ねる */
+.labels-horizontal {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  z-index: 2;
+}
+.label {
+  pointer-events: auto;
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 1.35em;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.93);
+  box-shadow: 0 4px 24px #9bf6ff44;
+  color: #174ba1;
+  text-decoration: none;
+  transition: background .18s, transform .10s;
+  border: 2px solid #3d79d980;
+  font-weight: 600;
+}
+.label:hover {
+  background: #d8e8fc;
+  transform: scale(1.06);
+}
+.hero-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; top: 0;
+  z-index: 1;
+  display: block;
+}
+/* ↓キャプション部分 */
+.caption {
+  background: #fff;
+  border-radius: 14px;
+  margin: 30px auto 0 auto;
+  box-shadow: 0 0 16px  #bed8fa55;
+  padding: 35px 32px 22px 32px;
+  width: 90%;
+  max-width: 750px;
+  color: #263048;
+  font-size: 1.12em;
+  line-height: 1.65;
+}
+.caption h3 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 1.13em;
+}
+.caption ul {
+  margin-top: 5px;
+  margin-bottom: 18px;
+  margin-left: 1.3em;
+  padding-left: 0.8em;
+}
+.caption ul li {
+  margin-bottom: 4px;
+}
+/* レスポンシブ  */
+@media screen and (max-width: 600px) {
+  .hero { height: 220px; }
+  .label { font-size: 1em; padding: 7px 11px; }
+  .labels-horizontal { gap: 8px; top: 16px;}
+  .menu-btn { font-size: 1.5em; top: 12px; left: 10px;}
+  .close-btn { font-size: 2em; left: 135px;}
+  .sidebar { width: 155px; padding-top: 35px;}
+  .caption { padding: 18px 8px 10px 8px; }
+}
+
+
+.labels-horizontal {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 38px;
+  z-index: 2;
+}
+.label {
+  pointer-events: auto;
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 1.35em;
+  border-radius: 32px;
+  background: rgba(255,255,255,0.93);
+  box-shadow: 0 4px 24px #9bf6ff44;
+  color: #174ba1;
+  text-decoration: none;
+  transition: background .18s, transform .10s;
+  border: 2px solid #3d79d980;
+  font-weight: 600;
+}
+
  
