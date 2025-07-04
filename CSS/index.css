@@ -35,6 +35,21 @@
   transform: translateX(-100%);
   transition: transform var(--transition);
   z-index: 1000;
+  background-image: url('../Gemini_Generated_Image_r7yb7cr7yb7cr7yb.jpg'); /* 画像のパスを適切に設定 */
+    background-size: cover;       /* 画像を要素に合わせて拡大・縮小 */
+    background-position: center;  /* 画像を中央に配置 */
+    background-repeat: no-repeat; /* 画像を繰り返さない */
+    opacity: 0.8;                 /* 背景画像の透明度（コンテンツの視認性を考慮して調整） */
+    
+    /* 必要に応じて追加・調整してください */
+    /* filter: brightness(0.7); */ /* 画像を暗くして文字を見やすくする */
+    color: #333; /* 元の文字色。背景によっては#fffなど白系も検討 */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7); 
+  }
+.side-menu .list-6 a {
+    color: #007bff; /* 元の文字色。背景によっては#fffなど白系も検討 */
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.7); /* 文字を強調して見やすくする */
+    /* border-bottom: 1px solid #eee; */ /* 背景画像で見えにくければ削除か色調整 */
 }
 
 #menu-toggle:checked + .menu-btn span:nth-child(1) {
