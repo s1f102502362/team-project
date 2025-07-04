@@ -18,27 +18,23 @@
 .menu-btn span {
   display: block;
   height: 4px;
-  background: #333;
+  background: rgb(67, 67, 67);
   border-radius: 2px;
   transition: all 0.3s;
 }
 
 .side-menu {
- position: fixed;
+  padding-top: 0;
+  position: fixed;
   top: 0;
   left: 0;
-  width:var(--menu-width) ;
+  width: var(--menu-width);
   height: 100vh;
   background: #fafafa;
   box-shadow: 2px 0 5px rgba(0,0,0,0.2);
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  transition: transform var(--transition);
   z-index: 1000;
-  padding-top: 60px;
-}
-
-#menu-toggle:checked ~ .side-menu {
-  transform: translateX(0);
 }
 
 #menu-toggle:checked + .menu-btn span:nth-child(1) {
@@ -56,41 +52,44 @@ main{
 }
 
 .content {
-  position: relative;
-  left: 0;
-  transition: left var(--transition);
+  box-sizing: border-box;
+  padding-right: 20px;
+  transition: transform var(--transition), width var(--transition); 
+  overflow-x: hidden;
 }
 
 #menu-toggle:checked ~ .side-menu {
-  left: 0;
+  transform: translateX(0);
 }
+
+#menu-toggle:not(:checked) ~ .content {
+  transform: translateX(0) scale(1);
+}
+
 #menu-toggle:checked ~ .content {
-  left: var(--menu-width);
+  transform: translateX(var(--menu-width));
+  width: calc(100% - var(--menu-width));
 }
 
 :root {
   --menu-width: 250px;     
-  --transition: 0.3s ease;  
+  --transition: 0.3s ease; 
 }
 
-
-body {
+#index01{
+  color: #ffffff;
+  text-align: center;
+  background: linear-gradient(to right, #667eea, #764ba2);
   margin: 0;
-  font-family: 'Segoe UI', Meiryo, 'ヒラギノ角ゴ ProN', sans-serif;
-  background: #f6f9ff;
-  min-height: 100vh;
+  padding: 10px 0;
 }
-
-/* メインビジュアル部分 */
 .hero {
   position: relative;
   width: 100%;
   height: 350px;
-  overflow: hidden;
-  background: #e5eefd;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  overflow: visible;
 }
-13:45
-/* ラベル横並び＋画像上に重ねる */
 .labels-horizontal {
   position: absolute;
   top: 40px;
@@ -127,7 +126,6 @@ body {
   z-index: 1;
   display: block;
 }
-/* ↓キャプション部分 */
 .caption {
   background: #fff;
   border-radius: 14px;
@@ -155,7 +153,7 @@ body {
 .caption ul li {
   margin-bottom: 4px;
 }
-/* レスポンシブ  */
+
 @media screen and (max-width: 600px) {
   .hero { height: 220px; }
   .label { font-size: 1em; padding: 7px 11px; }
@@ -191,4 +189,21 @@ body {
   font-weight: 600;
 }
 
- 
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ddd;
+}
